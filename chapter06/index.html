@@ -25,12 +25,27 @@
   </div>
 
   <script>
+    //0を追加
+    var addZERO = function(value){
+      if (value < 10){
+        value = '0' + value;
+      }
+      return value;
+    }
+
+
     var now = new Date();
     var seconds = now.getSeconds();
-    if (seconds < 10){
-      seconds = '0' + seconds;
-    }
-    document.getElementById('timer').innerHTML = seconds;
+    seconds = addZERO(seconds);
+
+    var minutes = now.getMinutes();
+    minutes = addZERO(minutes);
+
+
+    var hours = now.getHours();
+    hours = addZERO(hours);
+
+    document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
   </script>
 </body>
 </html>
