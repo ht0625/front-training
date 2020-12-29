@@ -33,19 +33,25 @@
       return value;
     }
 
-
-    var now = new Date();
-    var seconds = now.getSeconds();
-    seconds = addZERO(seconds);
-
-    var minutes = now.getMinutes();
-    minutes = addZERO(minutes);
+    document.getElementById('start_stop').addEventListener('click',
+    function(){
 
 
-    var hours = now.getHours();
-    hours = addZERO(hours);
 
-    document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
+      var now = new Date();
+      var seconds = now.getSeconds();
+      seconds = addZERO(seconds);
+
+      var minutes = now.getMinutes();
+      minutes = addZERO(minutes);
+
+
+      var hours = now.getHours();
+      hours = addZERO(hours);
+
+      document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
+
+    });
   </script>
 </body>
 </html>
